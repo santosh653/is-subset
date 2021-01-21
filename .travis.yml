@@ -1,3 +1,6 @@
+arch:
+  - amd64
+  - ppc64le
 before_install:
   git config user.name "Travis CI"
 
