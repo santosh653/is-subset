@@ -9,6 +9,15 @@ language:
 node_js:
   - "0.12"
   - "iojs"
-
+  - "4"
+  - "5"
+#Excluding the non supported versions on power & adding supported versions ie node_js:4 & 5
+jobs:
+ exclude:
+  - node_js: "0.12"
+    arch: ppc64le
+  - node_js: "iojs"
+    arch: ppc64le
+    
 after_script:
   npm run coveralls
